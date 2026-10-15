@@ -1,0 +1,7 @@
+numpy
+scipy
+pandas
+seaborn==0.13.*
+matplotlib
+numexpr
+scikit-learn

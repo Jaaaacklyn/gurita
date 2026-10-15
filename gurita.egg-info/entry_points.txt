@@ -1,0 +1,2 @@
+[console_scripts]
+gurita = gurita.gurita:main

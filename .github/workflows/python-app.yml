@@ -19,10 +19,10 @@ jobs:
         python-version: ["3.11", "3.x"] # 'gurita' requires a different Python: 3.10.22 not in '>=3.11'
 
     steps:
-    - uses: actions/checkout@v4 # Upgraded to latest version for stability and Node.js runtime support
+    - uses: actions/checkout@v7 # Upgraded to latest version for stability and Node.js runtime support
     
     - name: Set up Python ${{ matrix.python-version }} # Dynamically load Python versions from matrix
-      uses: actions/setup-python@v5 # Upgraded to v5
+      uses: actions/setup-python@v7 # Upgraded to v7
       with:
         python-version: ${{ matrix.python-version }}
 
@@ -46,7 +46,7 @@ jobs:
         
     - name: Save testing outputs as artifacts
       if: always()
-      uses: actions/upload-artifact@v4 # Upgraded to v4
+      uses: actions/upload-artifact@v7 # Upgraded to v7
       with:
         name: test_outputs
         path: test/outputs 
